@@ -1,0 +1,15 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #1a1d1f;
+}
+
+@font-face {
+  font-family: 'Dollar Bill';
+  src: url('./assets/DollarBill.ttf') format('truetype');
+}
+
+body {
+  background-color: #1a1d1f;
+}
