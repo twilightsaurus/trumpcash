@@ -36,7 +36,11 @@ export const Content = () => {
                 Copy the token address by clicking on the address below.
                 <Button
                   color='primary'
-                  sx={{ fontSize: '1em', cursor: 'copy' }}
+                  sx={{
+                    fontSize: '1em',
+                    cursor: 'copy',
+                    userSelect: 'text',
+                  }}
                   onClick={handleClick}
                 >
                   0x5456F6f2E9Cb1CFb939B787aAE729C020C82aF1B
