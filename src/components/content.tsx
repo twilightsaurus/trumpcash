@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import './content.css';
 import { Button, Snackbar } from '@mui/material';
+import { Link } from '@mui/material';
 
 export const Content = () => {
   const [open, setOpen] = useState(false);
@@ -27,26 +28,48 @@ export const Content = () => {
   return (
     <section className='content'>
       <div className='content-row'>
-        <ul className='steps'>
-          <li>Step 1: Buy Trump Cash.</li>
-          <li>Step 2: Add Trump Cash to your Blast Jackpot deck.</li>
+        <ol className='steps'>
           <li>
-            Step 3: Tell your friends, vibe with the community, and help Trump
-            get elected.
+            Buy Trump Cash
+            <ol>
+              <li>
+                Copy the token address by clicking on the address below.
+                <Button
+                  color='primary'
+                  sx={{ fontSize: '1em', cursor: 'copy' }}
+                  onClick={handleClick}
+                >
+                  0x5456F6f2E9Cb1CFb939B787aAE729C020C82aF1B
+                </Button>
+              </li>
+              <li>
+                Visit{' '}
+                <Link target='_blank' href='https://app.thruster.io/'>
+                  Thruster
+                </Link>{' '}
+                and paste the token address.
+              </li>
+            </ol>
           </li>
-          <li>Step 4: Win the Blast Jackpot.</li>
-          <li>Step 5: Donate to the Trump campaign.</li>
-        </ul>
+          <li>
+            Add Trump Cash to your{' '}
+            <Link
+              target='_blank'
+              href='https://blast.io/en/airdrop?tab=GoldJackpot'
+            >
+              Blast Jackpot
+            </Link>{' '}
+            deck.
+          </li>
+          <li>
+            Tell your friends, vibe with the community, and help Trump get
+            elected.
+          </li>
+          <li>Win the Blast Jackpot.</li>
+          <li>Donate to the Trump campaign.</li>
+        </ol>
       </div>
       <div className='content-row'>
-        <Button
-          color='primary'
-          sx={{ fontSize: '2em', cursor: 'copy' }}
-          onClick={handleClick}
-          className='ca'
-        >
-          0x5456F6f2E9Cb1CFb939B787aAE729C020C82aF1B
-        </Button>
         <Snackbar
           open={open}
           autoHideDuration={3000}
